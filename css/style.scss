@@ -1,0 +1,26 @@
+@mixin round			{ @include round-top; @include round-bottom; }
+@mixin round-left		{ @include round-top-left; @include round-bottom-left; }
+@mixin round-right		{ @include round-bottom-right; @include round-top-right; }
+@mixin round-top		{ @include round-top-left; @include round-top-right; }
+@mixin round-bottom		{ @include round-bottom-left; @include round-bottom-right; }
+@mixin round-top-left		{ -webkit-border-top-left-radius: $round_px; -moz-border-radius-topleft: $round_px; border-top-left-radius: $round_px; }
+@mixin round-top-right		{ -webkit-border-top-right-radius: $round_px; -moz-border-radius-topright: $round_px; border-top-right-radius: $round_px; }
+@mixin round-bottom-right	{ -webkit-border-bottom-right-radius: $round_px; -moz-border-radius-bottomright: $round_px; border-bottom-right-radius: $round_px; }
+@mixin round-bottom-left	{ -webkit-border-bottom-left-radius: $round_px; -moz-border-radius-bottomleft: $round_px; border-bottom-left-radius: $round_px; }
+@mixin boxit			{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+@mixin position-full-screen	{ position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+@mixin centerize		( $width : $content_width ){ position: absolute; 	display: block; left: 50%; margin-left: -1 * $width / 2; width: $width; }
+@mixin placeholder-color	( $fg){ &::-webkit-input-placeholder { color: $fg; } &:-moz-placeholder { color: $fg; } &::-moz-placeholder { color: $fg; } &:-ms-input-placeholder {  color: $fg; } }
+@mixin titleSize		( $sz : 24px){ font-size: $sz; line-height: $sz + ($sz/2); }
+$content_spacing 		: 20px;
+$content_padding 		: 50px;
+$grey		 		: #ccc;
+$dgrey		 		: #888;
+$highlight	 		: #244778;
+$round_px 	 		: 10px;
+@import 			"hover",
+				"more",
+				"person",
+				"slider",
+				"splits",
+				"tabs";
